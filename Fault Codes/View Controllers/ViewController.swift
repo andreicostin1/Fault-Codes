@@ -180,9 +180,7 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
                     faultCause = ""
                 }
                 //after data is populated, change viewController in thread 1
-                DispatchQueue.main.async{
-                    self.performSegue(withIdentifier: "showFault", sender: nil)
-                }
+        
 
             } catch let jsonErr {
                 print("Error serializing json:", jsonErr)
@@ -196,10 +194,6 @@ class ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataS
         }
 
     }
-    
-    
-    
-    
     
     
     /*
